@@ -1,0 +1,23 @@
+
+
+<table style="margin-left:auto;margin-right:auto;margin-top:40px;">
+  <tr>
+    <td></td>
+    <td style="font-weight:bold;margin-bottom:0px;padding-right:10px;">Wins</td>
+    <td style="font-weight:bold;margin-bottom:0px;padding-right:10px;">Losses</td>
+    <td style="font-weight:bold;margin-bottom:0px;padding-right:10px;">Draws</td>
+    <td style="font-weight:bold;margin-bottom:0px;padding-right:10px;">KOs</td>
+    <td></td>
+  </tr>
+  
+  <% @fighters.each do |fighter| %>
+  <tr>
+    <td style="margin-bottom:0px;padding-right:10px;"><%= fighter[:first_name] %> <%= fighter[:last_name] %></td>
+    <td style="margin-bottom:0px;"><%= fighter[:wins]%></td>
+    <td style="margin-bottom:0px;"><%= fighter[:losses] %></td>
+    <td style="margin-bottom:0px;"><%= fighter[:draws] %></td>
+    <td style="margin-bottom:0px;"><%= fighter[:kos] %></td>
+  </tr>
+  <% end %>
+
+</table>

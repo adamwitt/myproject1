@@ -1,0 +1,103 @@
+<h3>Edit Gym Details</h3>
+<p>From here you can edit the contact details of your gym or upload a new gym photo to replace the old one.</p>
+
+<p>REMEMBER to CONFIRM YOUR PASSWORD before submitting the form. If you change your password, confirm with your changed password.</p>
+
+
+<%= error_messages_for :gym %>
+
+<% form_for :gym, @gym, :url => { :action => "update_gym_details" }, :html => { :multipart => true } do |g| %>
+
+<fieldset>
+
+
+  <ul class="form">
+    <li>
+      <label class="form_section">Main Details</label>
+    </li>
+    <li>
+      <%= g.text_field :name %> Gym Name *
+    </li>
+    <li>
+      <%= g.text_field :first_name %> Your first name *
+    </li>
+    <li>
+      <%= g.text_field :last_name %> Your last name *
+    </li>
+  </ul>
+  
+  
+  <ul class="form">
+  <li>
+    <label class="form_section">Account Details</label>
+  </li>
+  <li>
+    <%= g.text_field :login_id %> Login ID *
+  </li>
+  <li>
+    <%= g.password_field :password %> Password *
+  </li>
+  <li>
+    <%= password_field_tag "confirm_password", "", :size => 30 %> <strong>Confirm Password *</strong>
+  </li>
+  </ul>
+  
+  <ul class="form">
+  <li>
+    <label class="form_section">Contact Details</label>
+  </li>
+  <li>
+    <%= g.text_field :primary_contact_number %> Primary phone number *
+  </li>
+  <li>
+    <%= g.text_field :secondary_contact_number %> Secondary phone number
+  </li>
+  <li>
+    <%= g.text_field :email %> Email *
+  </li>
+  <li>
+    <%= g.text_field :website %> Website
+  </li>
+  </ul>
+  
+  
+  <ul class="form">
+    <li>
+      <label class="form_section">Gym Address</label>
+    </li>
+    <li>
+      <%= g.text_field :address_line_1 %> Address Line 1 *
+    </li>
+  <li>
+    <%= g.text_field :address_line_2 %> Address Line 2
+  </li>
+  <li>
+    <%= g.text_field :city %> Suburb / City 
+  </li>
+  <li>
+    <%= select_tag "gym[state]"," 
+    <option value=\"ACT\">ACT</option>
+    <option value=\"NSW\">NSW</option>
+    <option value=\"NT\">NT</option>
+    <option value=\"QLD\">QLD</option>
+    <option value=\"SA\">SA</option>
+    <option value=\"TAS\">TAS</option>
+    <option value=\"VIC\">VIC</option>
+    <option value=\"WA\">WA</option>"
+  %> State *
+  </li>
+  </ul>
+  
+  <ul class="form"><li>* indicates a mandatory field</li></ul>
+  
+  <ul class="form">
+    <li><label class="form_section">Gym Photo</label></li>
+    <li>    <%= file_field_tag "photo" %></li>
+    <li> <em>Maximum file size 100kb. If you have trouble uploading a photo please email witt@ozfighters.com.au</em></li>
+  </ul>
+  
+  <ul class="form">
+  <li>    <%= submit_tag "Update Details" %>  </li>
+  </ul>
+  </fieldset>
+  <% end %>

@@ -1,0 +1,6 @@
+
+<% if !@gyms.empty? %>
+  <% for gym in @gyms %>
+    <%= link_to "#{gym[:name]} - #{gym[:first_name].capitalize} #{gym[:last_name].capitalize}", {:controller => :main, :action => :gym, :id => gym.id} %><br/>
+  <% end %>
+<% else %><!-- --><% end %>

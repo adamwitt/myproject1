@@ -1,0 +1,132 @@
+<h3>Gym Registration</h3>
+<h4>Add your gym and fighters to the Australian Fighter Database</h4>
+
+<p>
+PLEASE: Only use this form if you legitimately own a real gym and want your fighters to be noticed by all of Australia. If every man and his dog signed up with fantasy gyms that didn't really exist the site would not function as it should and everyone loses out - the promoters, the fighters, and the fans. 
+</p>
+<p>
+People who abuse this form will be banned from using this site all together. This is to maintain the integrity of OzFighters.com.au and to ensure that this online tool is as useful and resourceful as possible for all promoters and fans alike.
+</p>
+<p>
+Thank you.
+- OzFIghters.com.au
+</p>
+
+
+
+
+
+
+<%= error_messages_for "gym", :header_message => nil, :class => "error" %>
+
+
+<% form_for :gym, @gym, :url => { :action => "create" } do |g| %>
+
+
+<fieldset>
+
+
+  <ul class="form">
+    <label class="form_section">Main Details</label>
+    <li>
+      <%= g.text_field :name %> <label class="form">Gym Name *
+    </li>
+    <li>
+      <%= g.text_field :first_name %> <label class="form"> Head Trainer's first name *
+    </li>
+    <li>
+      <%= g.text_field :last_name %> <label class="form">Head Trainer's last name *</li>
+    <li>
+  </ul>
+  
+  <ul class="form">
+    <label class="form_section">Account Details</lable>
+    <li>
+      <%= g.text_field :login_id %> <label class="form">Login ID *
+    </li>
+    <li>
+      <%= g.password_field :password %> <label class="form">Password *
+    </li>
+    <li>
+      <em>It is recommended you use a password that consists of both lowercase and uppercase letters, and also numbers. e.g. "a24xAW9"</em>
+    </li>
+  </ul>
+  
+  <ul class="form">
+    <label class="form_section">Secret Question & Answer</label>
+    <li>
+      <em>In the event that you lose your password, you can prove you own the account by answering the secret question that you nominate here, which will then allow you to reset your password.</em>
+    </li>
+    <li>
+      <%= select_tag "gym[secret_question]"," 
+      <option value=\"What is your first pets name\">What is your first pets name?</option>
+      <option value=\"What is the name of the hospital you were born in\">What is the name of the hospital you were born in?</option>
+      <option value=\"What is your mothers maiden name\">What is your mothers maiden name?</option>
+      <option value=\"What street did you grow up on\">What street did you grow up on?</option>
+      <option value=\"Who was your childhood hero\">Who was your childhood hero?</option>"%> <label class="form">Secret Question *
+    </li>
+    <li>
+      <%= g.text_field :secret_answer %> <label class="form">Secret Answer *
+    </li>
+  </ul>
+  
+  
+  <ul class="form">
+    <label class="form_section">Contact Details</label>
+    <li>
+      <%= g.text_field :primary_contact_number %> <label class="form">Primary contact number *
+    </li>
+    <li>
+      <%= g.text_field :secondary_contact_number %> <label class="form">Secondary contact number
+    </li>
+    <li>
+      <%= g.text_field :email %> <label class="form">Email *
+    </li>
+    <li>
+      <%= g.text_field :website %> <label class="form">Website
+    </li>
+  </ul>
+  
+  
+  <ul class="form">
+    <label class="form_section">Gym Address</label>
+    <li>
+      <%= g.text_field :address_line_1 %> <label class="form">Address Line 1 *
+    </li>
+    <li>
+      <%= g.text_field :address_line_2 %> <label class="form">Address Line 2
+    </li>
+    <li>
+      <%= g.text_field :city %> <label class="form">Suburb / City *
+    </li>
+    <li>
+      <%= select_tag "gym[state]"," 
+      <option value=\"ACT\">ACT</option>
+      <option value=\"NSW\">NSW</option>
+      <option value=\"NT\">NT</option>
+      <option value=\"QLD\">QLD</option>
+      <option value=\"SA\">SA</option>
+      <option value=\"TAS\">TAS</option>
+      <option value=\"VIC\">VIC</option>
+      <option value=\"WA\">WA</option>"%> <label class="form">State *
+    </li>
+  </ul>
+  
+  <ul class="form"><li>* indicates a mandatory field</li></ul>
+  
+  <ul class="form">
+    <label class="form_section">Gym Photo</label>
+    <li>After successful registration, you can login to your account and upload a gym photo for everyone to see.</li>
+  </ul>
+  
+  <ul class="form">
+    <label class="form_section">Add your Fighters</label>
+    <li>
+      After successful registration, simply login to your account and add your fighter details and photos so that they can be accessed and viewed by promoters and fans all around Australia!
+    </li>
+  </ul>
+
+  <ul class="form"><%= submit_tag "Register" %></ul>
+  
+  </fieldset>
+<% end %>

@@ -1,0 +1,31 @@
+
+<h3>Fighters Search</h3>
+<h2>The following fighters match your search criteria:</h2>
+<p>
+<% params[:criteria].each do |k,v| %>
+  <%= k %>: <%= v %><br/>
+<% end %>
+</p>
+
+<ul class="search_row">
+<% count = 0 %>
+<% @fighters.each do |fighter| %>  
+
+  <li class="photo">
+    <%= link_to(image_tag(fighter.photo.url(:thumb), :style => "margin-bottom:0px;padding-bottom:0px;"), :controller => :main, :action => :fighter, :id => fighter[:id]) %>
+    <div class="photo_stats">
+      <%= fighter[:first_name].capitalize %> <%= fighter[:last_name].capitalize %><br/><%= fighter.gym[:state] %><br/>
+      <%= fighter[:min_weight] %> - <%= fighter[:max_weight] %>kg<br/>
+      <%= fighter[:wins] %>W / <%= fighter[:losses] %>L / <%= fighter[:draws] %>D / <%= fighter[:kos] %>KO
+    </div>
+  </li>
+  
+  <% count = count + 1 %>
+  
+  <% if (count % 5) == 0 %>
+    </ul>
+    <ul class="search_row">
+  <% end %>
+  
+<% end %>
+</ul>

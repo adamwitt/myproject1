@@ -1,0 +1,6 @@
+<h2>Search Results for: <%= params[:gymsearch] %></h2>
+<% if !@gyms.empty? %>
+  <% for gym in @gyms %>
+    <%= link_to "#{gym[:name]} - #{gym[:first_name].capitalize} #{gym[:last_name].capitalize} (#{gym[:state]})", {:controller => :main, :action => :gym, :id => gym.id} %><br/>
+  <% end %>
+<% else %><!-- -->h<% end %>

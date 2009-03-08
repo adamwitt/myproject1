@@ -1,0 +1,29 @@
+
+<div id="fighter_profile_photo">
+  <p><%= image_tag @fighter.photo.url, :style => "border: 1px solid #ffffff;" %></p>
+</div>
+
+<div id="fighter_details">
+<h1><%= @fighter[:first_name].capitalize %> <%= (@fighter[:ring_name] and @fighter[:ring_name] != "") ? "\"#{ @fighter[:ring_name] }\" " : nil%><%= @fighter[:last_name].capitalize %></h1>
+
+<p>Gym: <%= link_to "#{@fighter.gym[:name]} (#{@fighter.gym[:state]})", :action => :gym, :id => @fighter.gym[:id] %> </p>
+
+  <p><%= @fighter[:min_weight] %> - <%= @fighter[:max_weight] %>kg</p>
+  <p><%= @fighter[:wins] %>W / <%= @fighter[:losses] %>L / <%= @fighter[:draws] %>D / <%= @fighter[:kos] %>KO</p>  
+  
+  <p>Disciplines: <br/>
+  <% @fighter.rules.each do |rule| %>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= rule[:discipline] %><br/>
+  <% end %>
+  </p>
+  
+  <p style="margin-bottom:30px;">
+  <em>Last updated: <%= @fighter[:updated_at] %></em>
+  </p>
+  
+  <p>
+    <%= @fighter[:about] %>
+  </p>
+</div>
+
+

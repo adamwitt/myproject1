@@ -1,0 +1,5 @@
+<% if !@fighters.empty? %>
+  <% for fighter in @fighters %>
+    <%= link_to "#{fighter.first_name} #{fighter.last_name}", {:controller => :main, :action => :fighter, :id => fighter.id} %><br/>
+  <% end %>
+<% else %><!-- --><% end %>

@@ -1,0 +1,66 @@
+
+<div id="gym_photo">
+  <p><%= image_tag @gym.photo.url, :height => "60%", :width => "80%" %></p>
+</div>
+
+<div id="gym_details">
+  <h1><%= @gym.name %></h1>
+  <p>Head Trainer: <%= @gym[:first_name].capitalize %> <%= @gym[:last_name].capitalize %></p>
+  
+  <p>
+    Website: <%= auto_link @gym[:website] %><br/>
+    Email: <%= auto_link @gym[:email] %>
+  </p>
+  
+  <p>
+    Phone Number: <%= ( @gym[:primary_contact_number] and @gym[:primary_contact_number] != "" ) ? @gym[:primary_contact_number] : "n/a" %><br/>
+    <%= (@gym[:secondary_contact_number] and @gym[:primary_contact_number] != "") ? @gym[:secondary_contact_number] : "n/a" %>
+  </p>
+  
+  <p>Address:<br/>
+    <%= @gym[:address_line_1] %><br/>
+    <%= ( @gym[:address_line_2] and @gym[:address_line_2] != "" ) ? @gym[:address_line_2]+"<br/>" : "" %>
+    <%= @gym[:city] %><br/>
+    <%= @gym[:state] %><br/>
+  </p>
+</div>
+
+
+<div id="gym_about">
+  <%= @gym[:about] %>  
+</div>
+
+<h3>Fighters</h3>
+<% if @gym.fighters.empty? %>
+  No fighters added to database yet.
+<% else %>
+
+
+
+
+<ul class="search_row">
+<% count = 0 %>
+<% @gym.fighters.each do |fighter| %>  
+
+  <li class="photo">
+    <%= link_to(image_tag(fighter.photo.url(:thumb), :style => "margin-bottom:0px;padding-bottom:0px;"), :controller => :main, :action => :fighter, :id => fighter[:id]) %>
+    <div class="photo_stats">
+      <%= fighter[:first_name].capitalize %> <%= fighter[:last_name].capitalize %><br/>
+      <%= fighter[:min_weight] %> - <%= fighter[:max_weight] %>kg<br/>
+      <%= fighter[:wins] %>W / <%= fighter[:losses] %>L / <%= fighter[:draws] %>D / <%= fighter[:kos] %>KO
+    </div>
+  </li>
+  
+  <% count = count + 1 %>
+  
+  <% if (count % 5) == 0 %>
+    </ul>
+    <ul class="search_row">
+  <% end %>
+  
+<% end %>
+</ul>
+
+  
+<% end %>
+

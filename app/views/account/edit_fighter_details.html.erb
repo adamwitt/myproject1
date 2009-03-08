@@ -1,0 +1,64 @@
+<h3>Update Fighter Details</h3>
+
+<%= error_messages_for "fighter", :header_message => nil, :class => "error" %>
+
+<% form_for :fighter, @fighter, :url => { :action => "update_fighter_details" }, :html => { :multipart => true } do |g| %>
+
+<fieldset><%= hidden_field_tag "fighter_id", @fighter[:id] %>
+<ul class="form">
+  <li>    <label class="form_section">Fighter Details</label>  </li>
+  <li>
+    <%= select_tag "fighter[gender]"," 
+    <option value=\"M\">Male</option>
+    <option value=\"F\">Female</option>"
+    %> Gender *
+  </li>
+  <li>    <%= g.text_field :first_name, :size => 10 %> Fighter's first name *</li>
+  <li>    <%= g.text_field :last_name, :size => 10 %> Fighter's last name *  </li>
+  <li>   <%= g.text_field :ring_name, :size => 10 %> Ring Name  </li>
+</ul>
+
+<ul class="form">
+  <li>    <label class="form_section">Weight Class</label>  </li>
+  <li>    <%= g.text_field :min_weight, :size => 5 %> Minimum weight (kgs) *  </li>
+  <li>    <%= g.text_field :max_weight, :size => 5 %> Maximum weight (kgs) *  </li>
+</ul>
+  
+<ul class="form">
+  
+  <li>  <label class="form_section">Discipline *</label>  </li>
+  <% @rules.each do |rule| %>
+    <li><%= check_box_tag "disciplines[#{rule[:discipline]}]", rule[:id],  (@fighter_rules.include? rule[:id]) ? {:checked => true} : nil %> <%= rule[:discipline] %> </li>
+  <% end %>
+</ul>
+  
+<ul class="form">
+  <li>  <label class="form_section">About this fighter:</label>  </li>
+  <li>    <%= g.text_area :about, :rows => 5, :cols => 40%>  </li>
+  <li>    <em>You may wish to add a small biography / interests &amp; hobbies / details about previous opponents / any titles held / etc...</em>  </li>
+ </ul>
+ 
+  <ul class="form">    
+    <li> <label  class="form_section">STATUS *  </label></li>
+    <li>  <%= select_tag "fighter[status]"," 
+    <option value=\"ACTIVE\">Currently ACTIVE</option>
+    <option value=\"INACTIVE\">Currently INACTIVE</option>"
+  %>  </li>
+  </ul>
+  
+  
+  <ul class="form"><li>* indicates a mandatory field</li></ul>
+  
+  <ul class="form">
+    <li><label class="form_section">Fighter Profile Pic</label></li>
+    <li>    <%= g.file_field :photo %></li>
+    <li>    <em>Simply leave the photo file field blank if you want to keep the current photo.</em></li>
+  </ul>
+  
+  <ul class="form">
+  <li>    <%= submit_tag "Update Details" %>  </li>
+  </ul>
+  </fieldset>
+<% end %>
+
+

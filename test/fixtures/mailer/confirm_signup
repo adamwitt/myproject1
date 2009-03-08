@@ -1,0 +1,3 @@
+Mailer#confirm_signup
+
+Find me in app/views/mailer/confirm_signup.erb

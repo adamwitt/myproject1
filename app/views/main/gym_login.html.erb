@@ -1,0 +1,10 @@
+<div style="text-align:center;width:100%;margin-top:100px;">
+<div id="login" style="margin-left:30%;margin-right:30%;padding:5px;background-image:url('/images/transparent_bg.png');background-repeat:repeat;border: 1px solid #000000;">
+<% form_tag( {:action => 'login'}, { :id => 'login_form'} ) do %>
+          <fieldset>
+            Login ID: &nbsp;&nbsp;<%= text_field_tag "login_id" %><br/>
+            Password: <%= password_field_tag "password" %> <br/><br/>
+            <%= submit_tag "Login" %>
+          </fieldset>
+<% end %>
+</div></div>

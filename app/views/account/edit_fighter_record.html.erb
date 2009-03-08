@@ -1,0 +1,31 @@
+<h3>Update Fighter Records</h3>
+
+<%= form_tag :action => :update_fighter_record %>
+<table style="margin-left:auto;margin-right:auto;">
+  <tr>
+    <td></td>
+    <td style="font-weight:bold;margin-bottom:0px;">Wins</td>
+    <td style="font-weight:bold;margin-bottom:0px;">Losses</td>
+    <td style="font-weight:bold;margin-bottom:0px;">Draws</td>
+    <td style="font-weight:bold;margin-bottom:0px;">KOs</td>
+    <td></td>
+  </tr>
+  
+  <% @fighters.each do |fighter| %>
+  <tr>
+    <td style="margin-bottom:0px;"><%= fighter[:first_name] %> <%= fighter[:last_name] %></td>
+    <td style="margin-bottom:0px;"><%= text_field_tag "update[#{fighter[:id]}][wins]", fighter[:wins], :size => 3 %></td>
+    <td style="margin-bottom:0px;"><%= text_field_tag "update[#{fighter[:id]}][losses]", fighter[:losses], :size => 3 %></td>
+    <td style="margin-bottom:0px;"><%= text_field_tag "update[#{fighter[:id]}][draws]", fighter[:draws], :size => 3 %></td>
+    <td style="margin-bottom:0px;"><%= text_field_tag "update[#{fighter[:id]}][kos]", fighter[:kos], :size => 3 %></td>
+    <td style="margin-bottom:0px;"><%= link_to "- Edit Other Details", :action => :edit_fighter_details, :id => fighter[:id] %>
+  </tr>
+  <% end %>
+
+<tr><td colspan="5" style="text-align:center;">
+<%= submit_tag "Update Records" %>
+</td></tr>
+</table>
+</form>
+
+ 

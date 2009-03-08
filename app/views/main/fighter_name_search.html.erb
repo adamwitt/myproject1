@@ -1,0 +1,7 @@
+<h2>Search Results for: <%= params[:name_search] %></h2>
+
+<% if !@fighters.empty? %>
+  <% for fighter in @fighters %>
+    <%= link_to "#{fighter[:first_name]} #{fighter[:last_name]} - #{fighter.gym.name} (#{fighter.gym.state})", {:controller => :main, :action => :fighter, :id => fighter.id} %>
+  <% end %>
+<% else %><!-- --><% end %>

@@ -1,0 +1,399 @@
+
+
+
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<link href="/stylesheets/main.css?1236336856" media="screen" rel="stylesheet" type="text/css" />
+<title>OzFighters.com.au - Australia's Comprehensive Fighter Database</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/> 
+<meta name="Author" content="Adam Witt" />
+<meta name="Keywords" content="muay thai,ozfighters,oz fighters, john wayne parr, daniel dawson, international kickboxer, Mark Castagnini, Michael Shiavello, sportzblitz, anthony mundine, danny green, fights,australian muay thai,boxing,eugene ekkelboom,knockout,brawl,fighter directory,fighter database,kickboxing,fights, fighters, fighting, brawl, muay, thai, thai boxing, boxing, kickboxing, kick boxing, mma, mixed, martial, arts, martial arts, mixed martial arts, wayne parr, preacher, bruce macfie, shaggy king, eugene ekkelboom, chris white, tiger, chris tiger white, luke aram, pitbull, luke pitbull aram, the rock, full thai rules, FTR, elbows, knees, weapons, 8 weapons, ghot seur noi, daddy cool, dane daddy cool, eli madigan, eli, madigan, angie parr, caley lewis, cales, kim olsen, kool as, kim kool as olsen, harold olsen, steve zankl, boneman, boney, kershall wallace, jake marks, 9mm, IK, IK Magazine, Shiv, The Voice, aussie fighter, australian fighters, aussie fight, aussie brawl, biff, bring back the biff, comprehensive database, fighter database, fight database, aussie database, mike tyson, evander holifield, green machine, choc, the man,mundine, anthony, the man mundine, kickett, rob powdrill, riddlers gym, darren reece, darren the riddler reece, mr muay thai, nugget, nuggets gym, nuggets thai boxing, powerplay, powerplay promotions, supremacy, road to supmremacy, evolution, knees of fury, knockout, KTFO, beat, UPD, split points" />
+<meta name="Description" content="Comprehensive database of Amateur and Professional Australian Fighters" />
+<meta http-equiv="imagetoolbar" content="no" />
+
+<script src="/javascripts/prototype.js?1233834611" type="text/javascript"></script>
+<script src="/javascripts/effects.js?1233834611" type="text/javascript"></script>
+<script src="/javascripts/dragdrop.js?1233834611" type="text/javascript"></script>
+<script src="/javascripts/controls.js?1233834611" type="text/javascript"></script>
+<script src="/javascripts/application.js?1233834611" type="text/javascript"></script>
+<script src="/javascripts/transparent_png.js?1234623309" type="text/javascript"></script>
+<script src="/javascripts/disableautocomplete.js?1235294530" type="text/javascript"></script>
+<script type="text/javascript">
+    DD_belatedPNG.fix('#wrapper,#footer,#notice,#error,#login');
+</script>
+
+<!--[if lte IE 7]>
+<style type="text/css">
+body {word-wrap:break-word;}
+/* for IE6 */
+* html #wrapper {display:inline-block;}
+</style>
+<![endif]-->
+
+</head>
+
+<body onload="disable_auto_complete()">
+		<div id="header">
+        <div id="top-links" >
+                <a href="/">Home</a>
+                <a href="/main/rankings">Rankings</a>
+                <a href="/articles">Articles</a>
+                <a href="/feedback">Feedback</a> | 
+                <a href="/registration/form">Register your Gym</a>
+                <a href="/main/gym_login">Gym Login</a> | 
+                <a href="http://sportzblitz.net/Forum/forum.asp?FORUM_ID=6">Sportzblitz IK Forum</a>
+                
+        
+        </div>
+        
+        
+
+        
+        
+        
+        
+
+        <div id="search-bar">
+        <form action="/main/search" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="efe35ba50bb7a451c676ec94990a09f4ebf3f0bf" /></div>
+                  <fieldset>
+                  <select id="criteria_gender" name="criteria[gender]"> 
+                    <option value="all">Gender</option>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option></select>
+                  
+                  <select id="criteria_weight" name="criteria[weight]" style="padding-left:10px; margin-left:10px;">
+                    <option value="all">Weight</option>
+                    <option value="95">Super Heavyweight	(95 kg+)</option>
+                    <option value="86">Heavyweight  (86 kg+)</option>
+                    <option value="86">Cruiserweight	(86 kg)</option>
+                    <option value="79">Light Heavyweight 	(79 kg)</option>
+                    <option value="76">Super Middleweight  (76 kg)</option>
+                    <option value="73">Middleweight (73 kg)</option>
+                    <option value="70">Junior Middleweight  (70 kg)</option>
+                    <option value="67">Welterweight (67 kg)</option>
+                    <option value="64">Junior Welterweight  (64 kg)</option>
+                    <option value="61">Lightweight  (61 kg)</option>
+                    <option value="59">Junior Lightweight  (59 kg)</option>
+                    <option value="57">Featherweight (57 kg)</option>
+                    <option value="55">Junior Featherweight 	(55 kg)</option>
+                    <option value="54">Bantamweight  (54 kg)</option>
+                    <option value="52">Junior Bantamweight (52 kg)</option>
+                    <option value="51">Flyweight (51 kg)</option>
+                    <option value="49">Junior Flyweight (49 kg)</option>
+                    <option value="48">Mini Flyweight (48 kg)</option></select>
+                  
+                  <select id="criteria_experience" name="criteria[experience]" style="padding-left:10px; margin-left:10px;">
+                    <option value="all">Experience</option>
+                    <option value="5 or less fights">5 or less fights</option>
+                    <option value="10 or less fights">10 or less fights</option>
+                    <option value="20 or less fights">20 or less fights</option>
+                    <option value="21 or more fights">21 or more fights</option></select>
+
+                  
+                  <select id="criteria_state" name="criteria[state]" style="padding-left:10px; margin-left:10px;">
+                    <option value="all">State</option>
+                    <option value="ACT">ACT</option>
+                    <option value="NSW">NSW</option>
+                    <option value="NT">NT</option>
+                    <option value="QLD">QLD</option>
+                    <option value="SA">SA</option>
+                    <option value="TAS">TAS</option>
+                    <option value="VIC">VIC</option>
+                    <option value="WA">WA</option></select>
+                    
+                    
+                  <select id="criteria_gym" name="criteria[gym]" style="padding-left:10px; margin-left:10px;">
+                    <option value="all">Gym</option>
+                  
+                    <option value="1">Adams Gym</option>
+                  
+                  </select>
+
+                  <select id="criteria_discipline" name="criteria[discipline]" style="padding-left:10px; margin-left:10px;">
+                  <option value="all">Discipline / Rules</option>
+                  
+                    <option value="Muay Thai">Muay Thai</option>
+                  
+                    <option value="Boxing">Boxing</option>
+                  
+                    <option value="Kickboxing">Kickboxing</option>
+                  
+                    <option value="MMA">MMA</option>
+                  
+                  </select>
+                  
+                <input name="commit" type="submit" value="Search" />
+                </fieldset>
+                </form>
+        </div>
+		</div> <!-- end header -->
+
+
+
+
+
+
+
+		<div id="wrapper">
+			<div id="left-navigation">
+				<div class="content">
+
+          <p><label for="name_search_form" class="left">Fighter Name Search:</label></p>
+          <form action="/main/fighter_name_search" id="name_search_form" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="efe35ba50bb7a451c676ec94990a09f4ebf3f0bf" /></div>
+          <p>
+            <input id="name_search" name="name_search" onblur="setTimeout(&quot;document.getElementById('name_results').style.visibility = 'hidden';&quot;,1000)" onfocus="document.getElementById('name_results').style.visibility = 'visible';" type="text" />
+            <input id="perform_name_search" name="perform_name_search" type="hidden" value="true" />
+          </p>
+          <script type="text/javascript">
+//<![CDATA[
+new Form.Element.Observer('name_search', 0.25, function(element, value) {new Ajax.Updater('name_results', '/main/fighter_name_search', {asynchronous:true, evalScripts:true, parameters:'name='+escape(value) + '&authenticity_token=' + encodeURIComponent('efe35ba50bb7a451c676ec94990a09f4ebf3f0bf')})})
+//]]>
+</script>
+
+        <div id="name_results" class="auto_complete_pane"><!-- --></div>
+        </form><br/><br/>
+
+
+
+          <p><label for="gym_search_form" class="left">Search for a specific Gym:</label><br/></p>
+          <form action="/main/fighter_gym_search" id="gym_search_form" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="efe35ba50bb7a451c676ec94990a09f4ebf3f0bf" /></div>
+          <p>
+            <input id="perform_gym_search" name="perform_gym_search" type="hidden" value="true" />
+            <input id="gymsearch" name="gymsearch" onblur="setTimeout(&quot;document.getElementById('gym_results').style.visibility = 'hidden';&quot;,1000)" onfocus="document.getElementById('gym_results').style.visibility = 'visible';" type="text" />
+          </p>
+          <script type="text/javascript">
+//<![CDATA[
+new Form.Element.Observer('gymsearch', 0.25, function(element, value) {new Ajax.Updater('gym_results', '/main/fighter_gym_search', {asynchronous:true, evalScripts:true, parameters:'gym='+escape(value) + '&authenticity_token=' + encodeURIComponent('efe35ba50bb7a451c676ec94990a09f4ebf3f0bf')})})
+//]]>
+</script>
+
+        <div id="gym_results" class="auto_complete_pane"><!-- --></div>
+        <p>Hint: You can also search for a gym using the name of that gym's head trainer.</p>
+        </form>
+        <br/><br/>
+        
+          
+          
+
+        
+				</div> <!-- end content -->
+			</div>
+
+
+			<div id="main_section">
+				<div class="main_content">
+
+
+                                
+                                
+                                
+                                
+                                
+                                
+<h3>Fighters Search</h3>
+<h2>The following fighters match your search criteria:</h2>
+<p>
+
+  weight: all<br/>
+
+  gender: all<br/>
+
+  gym: all<br/>
+
+  discipline: all<br/>
+
+  experience: all<br/>
+
+  state: all<br/>
+
+</p>
+
+<div class="search_row">
+
+  
+
+  <div class="photo">
+    <a href="/main/fighter/1"><img alt="Thumb_profile_1" src="default_thumb_M.gif" style="margin-bottom:0px;padding-bottom:0px;" /></a>
+    <div class="photo_stats">
+      Adam Witt (ACT)<br/>
+      67.0 - 70.0kg<br/>
+      4W / 1L / 1D / 0KO
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+
+  <div class="photo">
+    <a href="/main/fighter/11"><img alt="Thumb_profile_1" src="default_thumb_M.gif" style="margin-bottom:0px;padding-bottom:0px;" /></a>
+    <div class="photo_stats">
+      Luke Aram (ACT)<br/>
+      57.0 - 60.0kg<br/>
+      12W / 1L / 0D / 3KO
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+
+  <div class="photo">
+    <a href="/main/fighter/12"><img alt="Thumb_profile_1" src="default_thumb_M.gif" style="margin-bottom:0px;padding-bottom:0px;" /></a>
+    <div class="photo_stats">
+      Adam Test (ACT)<br/>
+      10.0 - 100.0kg<br/>
+      0W / 0L / 0D / 0KO
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+
+  <div class="photo">
+    <a href="/main/fighter/13"><img alt="Thumb_original_profile_1" src="default_thumb_M.gif" style="margin-bottom:0px;padding-bottom:0px;" /></a>
+    <div class="photo_stats">
+      Megatron Massive (ACT)<br/>
+      50.0 - 90.0kg<br/>
+      0W / 0L / 0D / 0KO
+    </div>
+  </div>
+  
+  
+  
+  
+    </div>
+    <div class="search_row">
+  
+  
+  
+
+  <div class="photo">
+    <a href="/main/fighter/14"><img alt="Thumb_profile_1" src="default_thumb_M.gif" style="margin-bottom:0px;padding-bottom:0px;" /></a>
+    <div class="photo_stats">
+      Superbung Jimbo (ACT)<br/>
+      70.0 - 80.0kg<br/>
+      67W / 24L / 42D / 23KO
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+
+  <div class="photo">
+    <a href="/main/fighter/15"><img alt="Thumb_proflie_1" src="default_thumb_M.gif" style="margin-bottom:0px;padding-bottom:0px;" /></a>
+    <div class="photo_stats">
+      Look here Massbom (ACT)<br/>
+      50.0 - 100.0kg<br/>
+      3W / 3L / 3D / 3KO
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+
+  <div class="photo">
+    <a href="/main/fighter/16"><img alt="Thumb_profile_1" src="default_thumb_M.gif" style="margin-bottom:0px;padding-bottom:0px;" /></a>
+    <div class="photo_stats">
+      Adam Sadad (ACT)<br/>
+      0.0 - 100.0kg<br/>
+      0W / 0L / 0D / 0KO
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+
+  <div class="photo">
+    <a href="/main/fighter/17"><img alt="Thumb_profile_1" src="default_thumb_M.gif" style="margin-bottom:0px;padding-bottom:0px;" /></a>
+    <div class="photo_stats">
+      Addsfdsf Dsfew (ACT)<br/>
+      0.0 - 100.0kg<br/>
+      0W / 0L / 0D / 0KO
+    </div>
+  </div>
+  
+  
+  
+  
+    </div>
+    <div class="search_row">
+  
+  
+  
+
+  <div class="photo">
+    <a href="/main/fighter/18"><img alt="Thumb_profile_1" src="default_thumb_M.gif" style="margin-bottom:0px;padding-bottom:0px;" /></a>
+    <div class="photo_stats">
+      Xsxsxxsx Xsxs (ACT)<br/>
+      0.0 - 100.0kg<br/>
+      0W / 0L / 0D / 0KO
+    </div>
+  </div>
+  
+  
+  
+  
+  
+
+</div>
+
+				</div> <!-- end content -->
+			</div> <!-- end main_section -->
+
+
+			<div id="right-navigation">
+				<div class="content">
+					<h3>OzFighter News:</h3>
+          
+            <p>2009-02-23 - <a href="/main/gym/2">West Australian Thai Boxing Centre</a> is now a part of the Oz Fighter database!</p>
+          
+            <p>2009-02-22 - <a href="/main/gym/3">Nuggets Gym</a> is now a part of the Oz Fighter database!</p>
+          
+            <p>2009-02-20 - <a href="/main/gym/1">Riddlers Gym</a> is now a part of the Oz Fighter database!</p>
+          
+				</div> <!-- end content -->
+			</div> <!-- end outer2 -->
+
+
+		</div><!-- end #wrapper -->
+
+
+
+
+
+
+
+
+
+		<div id="footer">
+			<div class="content">
+				<p>Copyright &copy;2009 Adam Witt - witt@ozfighters.com.au | <a href="http://validator.w3.org/check?uri=referer">Valid XHTML 1.0 Strict</a> | <a href="http://jigsaw.w3.org/css-validator/check/referer">Valid CSS</a>
+</p>
+  
+			</div>
+		</div> <!-- end footer -->
+
+</body>
+</html>
